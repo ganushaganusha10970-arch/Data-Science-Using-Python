@@ -1,0 +1,11 @@
+order_id,customer,product,qty,unit_price,branch,amount
+101,Anitha,Laptop,1,54000,Chennai,54000
+102,Rahul,Mouse,3,450,Chennai,1350
+103,Priya,Keyboard,2,1200,Chennai,2400
+104,Karthik,Monitor,1,9500,Chennai,9500
+201,Divya,Laptop,2,52500,Online,105000
+202,Arjun,Headset,1,2300,Online,2300
+203,Meena,Mouse,5,430,Online,2150
+301,Suresh,Monitor,2,9300,Mobile,18600
+302,Lakshmi,Keyboard,1,1150,Mobile,1150
+303,Vignesh,Laptop,1,55000,Mobile,55000
