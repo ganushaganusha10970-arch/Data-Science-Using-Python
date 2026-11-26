@@ -1,21 +1,38 @@
-# EXPERIMENT 17 – Line Plots, Formatting and Time-Series Trends
+# DATA SCIENCE USING PYTHON
+
+## EXPERIMENT 17 - Line Plots, Formatting and Time-Series Trends
 
 **DATE: 24/11/26**
 
-## AIM:
+### AIM:
+
 To visualise monthly sales of a retail chain using formatted line plots and time-series charts.
 
-## QUESTION:
+### QUESTION:
+
 A retail chain has 24 months of sales data for Electronics, Clothing and Groceries. Build publication-quality line charts with Matplotlib showing all three categories, and analyse the trend and seasonality of the series over time.
 
-### PROGRAM REQUIREMENTS:
+The program must:
+
 1. Draw multiple lines on one plot with different colours, line styles and markers.
 2. Set the title, axis labels, axis limits, ticks, date formatting and grid.
 3. Add a legend, an annotation with an arrow and a text label.
 4. Fit and draw a linear trend line and a 3-month moving average.
 5. Use subplots to show month-on-month growth and save the figures to disk.
 
-## CODE:
+### ALGORITHM:
+
+1. Import NumPy, Pandas, Matplotlib and date formatting libraries.
+2. Generate 24 months of sales data for Electronics, Clothing and Groceries.
+3. Calculate yearly sales totals and identify the peak Electronics sales month.
+4. Fit a linear trend line using the least squares method.
+5. Calculate the 3-month moving average for Electronics sales.
+6. Draw multiple line plots with different colours, markers and line styles.
+7. Add titles, axis labels, annotations, legends and grid lines.
+8. Create subplots to display time-series smoothing and month-on-month growth.
+9. Save the generated figures and display the charts.
+
+### CODE:
 
 ```python
 import numpy as np
@@ -71,7 +88,8 @@ print(
 
 rolling = sales["Electronics"].rolling(3).mean()
 
-# Figure 1: Formatted multi-line chart
+# ---------- Figure 1: Formatted multi-line chart ----------
+
 fig, ax = plt.subplots(figsize=(10, 5))
 
 ax.plot(
@@ -153,7 +171,8 @@ ax.legend(loc="upper left", ncol=2, frameon=True)
 plt.tight_layout()
 plt.savefig("exp17_line.png", dpi=150)
 
-# Figure 2: Time-series smoothing and growth subplots
+# ---------- Figure 2: Subplots with time-series smoothing ----------
+
 fig, axes = plt.subplots(2, 1, figsize=(10, 6), sharex=True)
 
 axes[0].plot(
@@ -197,13 +216,13 @@ plt.show()
 print("\nSaved figures: exp17_line.png, exp17_timeseries.png")
 ```
 
-## OUTPUT:
+### OUTPUT:
 
+```text
 Monthly Sales Trend Analysis using Line Plots
 ==============================================
-```
 
-             Electronics  Clothing  Groceries
+            Electronics  Clothing  Groceries
 2025-01-01        128.1      69.5      150.5
 2025-02-01        128.4      66.4      153.3
 2025-03-01        138.3      79.9      152.8
@@ -211,28 +230,35 @@ Monthly Sales Trend Analysis using Line Plots
 2025-05-01        153.3     107.2      148.6
 2025-06-01        136.0     121.8      152.6
 ...
-```
 
-**Yearly totals (Rs. lakhs):**
-
-```
+Yearly totals (Rs. lakhs):
       Electronics  Clothing  Groceries
 2025       1696.0    1159.6     1862.8
 2026       2281.7    1410.5     1978.5
+
+Peak Electronics month: Dec 2026 (207.0 lakhs)
+
+Electronics trend line: sales = 125.62 + 3.49 * month_index
+
+Saved figures: exp17_line.png, exp17_timeseries.png
 ```
 
-**Peak Electronics month:** Dec 2026 (207.0 lakhs)
+### GRAPHICAL OUTPUT:
 
-**Electronics trend line:** sales = 125.62 + 3.49 * month_index
+**Figure 1: Monthly Sales by Category**
 
-**Saved figures:** exp17_line.png, exp17_timeseries.png
+![Monthly Sales Line Plot](../exp17_line.png)
 
-## FIGURES:
+**Figure 2: Electronics Time-Series Smoothing and Moving Average**
 
-1. Figure 1: Monthly Sales by Category (2025–2026).
-2. Figure 2: Electronics Time-Series Smoothing with 3-Month Moving Average.
-3. Figure 3: Groceries Month-on-Month Growth Chart.
+**Figure 3: Groceries Month-on-Month Growth**
 
-## RESULT:
+![Time Series Analysis](../exp17_timeseries.png)
+
+1. Monthly Sales by Category (Electronics, Clothing and Groceries).
+2. Electronics Time-Series Smoothing with 3-Month Moving Average.
+3. Groceries Month-on-Month Growth Chart.
+
+### RESULT:
 
 Thus, monthly sales data for Electronics, Clothing and Groceries was successfully visualised using formatted line plots and time-series charts. Linear trend analysis, moving averages and month-on-month growth were calculated successfully using Python and Matplotlib.
