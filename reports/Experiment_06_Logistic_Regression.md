@@ -1,6 +1,6 @@
 
 # DATA SCIENCE USING PYTHON
-
+**Date:** 20-11-26
 ## EXPERIMENT 6 - Logistic Regression for Customer Churn Prediction
 
 ### AIM:
