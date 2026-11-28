@@ -1,6 +1,6 @@
 
 # EXPERIMENT 8 – K-Means Clustering for Customer Segmentation
-
+**Date:** 20-11-26
 ## AIM:
 
 To segment mall customers using K-means clustering and evaluate the clusters.
