@@ -1,6 +1,6 @@
 
 # EXPERIMENT 13 – Distributed File System and Loading Data into HDFS
-
+**Date:** 23-11-26
 ## AIM:
 
 To simulate how HDFS splits a file into blocks, replicates them across DataNodes and recovers from a node failure.
